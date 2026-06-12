@@ -1,0 +1,32 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.almega-ai/almega-mcp",
+  "description": "A wallet & guardrail for AI agents: spending limits, human approval, and an audit ledger.",
+  "title": "Almega",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "almega-mcp",
+      "version": "0.1.0",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "ALMEGA_BACKEND",
+          "description": "Storage backend: 'memory' (default, zero-config) or 'stripe' (real Stripe Issuing test-mode virtual cards, no real money).",
+          "default": "memory"
+        },
+        {
+          "name": "STRIPE_SECRET_KEY",
+          "description": "Stripe TEST secret key (sk_test_...). Required only when ALMEGA_BACKEND=stripe. Almega refuses live keys.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

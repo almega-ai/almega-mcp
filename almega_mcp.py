@@ -592,5 +592,10 @@ def wallets_resource() -> str:
 
 # ──────────────────────────────────────────────────────────────────────────────
 
-if __name__ == "__main__":
+def main() -> None:
+    """Console entry point — runs the Almega MCP server over stdio."""
     mcp.run()
+
+
+if __name__ == "__main__":
+    main()
