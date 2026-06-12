@@ -2,6 +2,10 @@
 
 # 🧪 Almega MCP — the demonstrator
 
+<p align="center">
+  <img src="almega-demo.gif" alt="An AI agent attempts three payments — Almega approves one, holds one for human approval, and blocks one — in real time" width="760">
+</p>
+
 > A wallet & guardrail for AI agents, exposed as a Model Context Protocol
 > (MCP) server. Drop it into Claude Desktop, the Claude Agent SDK, or any
 > MCP-compatible client, and your agent has a wallet with hard limits, a
