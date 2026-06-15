@@ -7,7 +7,7 @@ engine.
 
 Usage:
     python demo.py
-    """
+"""
 
 from almega_mcp import (
     open_wallet,
@@ -20,13 +20,13 @@ from almega_mcp import (
 
 
 def demo() -> None:
-      print("\n=== Opening a wallet for research-bot ===")
-      print(open_wallet(
-          agent_id="research-bot",
-          monthly_limit=50.0,
-          allow=["api", "saas"],
-          approve_above=25.0,
-      ))
+    print("\n=== Opening a wallet for research-bot ===")
+    print(open_wallet(
+        agent_id="research-bot",
+        monthly_limit=50.0,
+        allow=["api", "saas"],
+        approve_above=25.0,
+    ))
 
     print("\n=== Attempt 1: $12 to openai.com (api) ===")
     tx1 = pay("research-bot", "openai.com", 12.0, "api")
@@ -50,5 +50,4 @@ def demo() -> None:
 
 
 if __name__ == "__main__":
-      demo()
-  
+    demo()

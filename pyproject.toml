@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "almega-mcp"
-version = "0.1.0"
-description = "A wallet & guardrail for AI agents: per-agent spending limits, allow-listed categories, 1-click human approval, and a full audit ledger, backed by Stripe Issuing."
+version = "0.2.0"
+description = "The immutable delegation frame for AI agents — set boundaries once, agents run free inside them, sensitive actions need one-click human approval, all logged. MCP-native, open source."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
@@ -15,13 +15,15 @@ keywords = [
     "mcp",
     "model-context-protocol",
     "ai-agents",
-    "agent-infrastructure",
+    "agent-governance",
+    "agent-control",
+    "guardrails",
+    "human-in-the-loop",
+    "approval",
+    "audit",
+    "mcp-security",
     "payments",
     "stripe",
-    "fintech",
-    "guardrails",
-    "wallet",
-    "human-in-the-loop",
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -46,7 +48,8 @@ Repository = "https://github.com/almega-ai/almega-mcp"
 Issues = "https://github.com/almega-ai/almega-mcp/issues"
 
 [project.scripts]
-almega-mcp = "almega_mcp:main"
+almega-mcp = "almega_gate:main"
+almega-wallet = "almega_mcp:main"
 
 [tool.setuptools]
-py-modules = ["almega_mcp"]
+py-modules = ["almega_gate", "almega_gateway", "almega_proxy", "almega_mcp"]
